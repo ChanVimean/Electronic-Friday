@@ -5,12 +5,14 @@ import NavBar from "./components/NavBar";
 import Home from "./page/Home";
 import About from "./page/About";
 import Contact from "./page/Contact";
+import BottomBar from "./components/BottomBar";
 
 const App = () => {
   return (
     <>
       <nav>
         <NavBar />
+        <BottomBar />
       </nav>
 
       <main>
