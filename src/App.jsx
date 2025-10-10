@@ -6,8 +6,14 @@ import Home from "./page/Home";
 import About from "./page/About";
 import Contact from "./page/Contact";
 import BottomBar from "./components/BottomBar";
+import { useContext } from "react";
+import ProductContext from "./context/ProductContext";
 
 const App = () => {
+  const { products } = useContext(ProductContext)
+
+  console.log(products)
+
   return (
     <>
       <nav>
