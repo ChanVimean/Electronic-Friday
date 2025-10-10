@@ -7,8 +7,14 @@ import About from "./page/About";
 import Contact from "./page/Contact";
 import BottomBar from "./components/BottomBar";
 import Cart from "./page/Cart";
+import { useContext } from "react";
+import ProductContext from "./context/ProductContext";
+import Product from "./page/Product";
 
 const App = () => {
+  const { products } = useContext(ProductContext)
+  console.log(products)
+
   return (
     <>
       <nav>
@@ -22,6 +28,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
       </main>
 

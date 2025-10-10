@@ -1,5 +1,5 @@
 import { AiFillHome } from "react-icons/ai";
-import { FaCircleQuestion } from "react-icons/fa6";
+import { FaCartShopping, FaCircleQuestion } from "react-icons/fa6";
 import { IoMdContact } from "react-icons/io";
 import { Link } from "react-router-dom";
 
@@ -19,6 +19,12 @@ const BottomBar = () => {
       <div className="flex flex-col items-center">
         <IoMdContact size={40} />
         <Link to="/">Contact</Link>
+      </div>
+
+      
+      <div className="flex flex-col items-center">
+        <FaCartShopping size={40} />
+        <Link to="/product">Product</Link>
       </div>
     </div>
   );

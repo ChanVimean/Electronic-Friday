@@ -9,6 +9,7 @@ import { Button } from "./ui/button";
 import ThemeContext from "@/context/ThemeContext";
 import { IoSunny } from "react-icons/io5";
 import { IoMdMoon } from "react-icons/io";
+import { FaCartShopping } from "react-icons/fa6";
 
 const NavBar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -31,17 +32,21 @@ const NavBar = () => {
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/contact">Contact</Link>
+              <Link to="/product">Product</Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
-        <aside className="flex space-x-4">
+        <aside className="flex space-x-4 items-center">
           <Button variant="secondary" className="cursor-pointer">
             Login
           </Button>
           <button onClick={toggleTheme} className="text-2xl cursor-pointer">
             {theme === "dark" ? <IoSunny /> : <IoMdMoon />}
           </button>
+          <Link to="/cart" className="text-2xl cursor-pointer">
+            <FaCartShopping />
+          </Link>
         </aside>
       </div>
     </nav>
